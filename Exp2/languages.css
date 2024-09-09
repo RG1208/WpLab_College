@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  background-color: black;
+  color: white;
+  align-items: center;
+
+}
+
+.language:hover {
+  color: rgb(0, 255, 234);
+  cursor: pointer;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.search {
+  height: 29px;
+  width: 40px;
+  border: none;
+  background-color: black
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+}
+
+.main {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.heading {
+  margin-bottom: 10px;
+  font-style: italic;
+  text-decoration: underline;
+  margin-left: 20px;
+  color: #1E90FF;
+}
+
+.Level {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #1E90FF;
+}
+
+.Intro {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.ul {
+  list-style: numbered;
+}
+
+.list {
+  font-size: 17px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.divs {
+  border: 2px solid rgb(187, 187, 187);
+  background-color: rgb(239, 239, 239);
+  box-shadow: 3px 3px 10px rgb(127, 127, 127);
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
