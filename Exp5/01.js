@@ -1,5 +1,0 @@
-let cart = []
-
-function addItem() {
-
-}
