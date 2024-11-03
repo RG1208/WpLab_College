@@ -4,6 +4,7 @@ function renderList() {
     const list = document.getElementById("groceryList");
     list.innerHTML = "";
 
+
     groceryList.forEach((item, index) => {
         const listItem = document.createElement("li");
 
