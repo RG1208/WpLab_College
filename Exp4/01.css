@@ -1,85 +1,110 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(95deg, #00feba, #5b548a);
-}
-
-.container {
-    max-width: 400px;
-    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin: 0;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    text-align: center;
+    color: #3b5998;
+    font-size: 2rem;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.form {
+.grocery-input-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.form input {
-    flex: 1;
+input[type="text"],
+input[type="number"] {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #3b5998;
 }
 
 button {
-    padding: 10px;
+    background-color: #3b5998;
+    color: #fff;
     border: none;
-    background-color: #28a745;
-    color: #ffffff;
-    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #29487d;
 }
 
-ul {
-    list-style: none;
+button:active {
+    transform: scale(0.98);
 }
 
-li {
+.grocery-list {
+    width: 90%;
+    max-width: 400px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grocery-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
-li span {
-    flex: 1;
+.grocery-item:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.edit-btn,
-.delete-btn {
-    margin-left: 10px;
+.grocery-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.grocery-item button {
+    background-color: #ff4d4d;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
     cursor: pointer;
-    color: #007bff;
+    transition: background-color 0.3s;
 }
 
-.edit-btn:hover {
-    color: #0056b3;
+.grocery-item button:hover {
+    background-color: #ff1a1a;
 }
 
-.delete-btn:hover {
-    color: #dc3545;
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
 }

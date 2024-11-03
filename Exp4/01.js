@@ -1,58 +1,63 @@
-let groceryList = [];
+let groceryItems = [];
 
+// Function to add a new item to the list
+function addItem() {
+    const itemName = document.getElementById("itemName").value;
+    const itemQuantity = document.getElementById("itemQuantity").value;
+
+    if (itemName.trim() === "" || itemQuantity <= 0) {
+        alert("Please enter a valid item name and quantity.");
+        return;
+    }
+
+    const newItem = {
+        name: itemName,
+        quantity: itemQuantity
+    };
+
+    groceryItems.push(newItem);
+
+    document.getElementById("itemName").value = "";
+    document.getElementById("itemQuantity").value = 1;
+
+    renderList();
+}
+
+// Function to render the grocery list
 function renderList() {
-    const list = document.getElementById("groceryList");
-    list.innerHTML = "";
+    const groceryList = document.getElementById("groceryList");
+    groceryList.innerHTML = "";
 
-
-    groceryList.forEach((item, index) => {
+    groceryItems.forEach((item, index) => {
         const listItem = document.createElement("li");
+        listItem.className = "grocery-item";
 
-        const span = document.createElement("span");
-        span.textContent = item;
+        listItem.innerHTML = `
+            <p>${item.name} - Quantity: ${item.quantity}</p>
+            <button onclick="editItem(${index})">Edit</button>
+            <button onclick="deleteItem(${index})">Delete</button>
+        `;
 
-        const editButton = document.createElement("span");
-        editButton.textContent = "Edit";
-        editButton.classList.add("edit-btn");
-        editButton.onclick = () => editItem(index);
-
-        const deleteButton = document.createElement("span");
-        deleteButton.textContent = "Delete";
-        deleteButton.classList.add("delete-btn");
-        deleteButton.onclick = () => deleteItem(index);
-
-        listItem.appendChild(span);
-        listItem.appendChild(editButton);
-        listItem.appendChild(deleteButton);
-
-        list.appendChild(listItem);
+        groceryList.appendChild(listItem);
     });
 }
 
-function addItem() {
-    const input = document.getElementById("groceryItem");
-    const item = input.value.trim();
+// Function to delete an item from the list
+function deleteItem(index) {
+    groceryItems.splice(index, 1);
+    renderList();
+}
 
-    if (item) {
-        groceryList.push(item);
-        input.value = "";
+// Function to edit an existing item in the list
+function editItem(index) {
+    const itemName = prompt("Edit item name:", groceryItems[index].name);
+    const itemQuantity = prompt("Edit quantity:", groceryItems[index].quantity);
+
+    if (itemName !== null && itemQuantity !== null && itemQuantity > 0) {
+        groceryItems[index].name = itemName;
+        groceryItems[index].quantity = itemQuantity;
         renderList();
     } else {
-        alert("Please enter an item");
+        alert("Please enter a valid item name and quantity.");
     }
-}
-
-function editItem(index) {
-    const item = groceryList[index];
-    const newItem = prompt("Edit item:", item);
-
-    if (newItem !== null && newItem.trim()) {
-        groceryList[index] = newItem.trim();
-        renderList();
-    }
-}
-
-function deleteItem(index) {
-    groceryList.splice(index, 1);
-    renderList();
 }

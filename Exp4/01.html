@@ -4,25 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery List</title>
+    <title>Grocery List with Quantity</title>
     <link rel="stylesheet" href="01.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Grocery List</h1>
+    <h1>Grocery List</h1>
 
-        <div class="form">
-            <input type="text" id="groceryItem" placeholder="Enter grocery item">
-            <button onclick="addItem()">Add Item</button>
-        </div>
-
-        <ul id="groceryList"></ul>
+    <div class="grocery-input-section">
+        <input type="text" id="itemName" placeholder="Enter grocery item">
+        <input type="number" id="itemQuantity" placeholder="Qty" min="1" value="1">
+        <button onclick="addItem()">Add</button>
     </div>
 
-    <script src="01.js">
+    <ul id="groceryList" class="grocery-list"></ul>
 
-    </script>
+
+
+    <script src="01.js"></script>
 </body>
 
 </html>
