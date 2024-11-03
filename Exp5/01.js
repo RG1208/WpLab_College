@@ -1,1 +1,5 @@
-document.querySelector(".left")
+let cart = []
+
+function addItem() {
+
+}

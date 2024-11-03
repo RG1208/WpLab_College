@@ -13,6 +13,12 @@ ul {
     background-color: rgb(0, 0, 104);
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    height: 100vh;
+}
+
 .name {
     display: flex;
     padding: 20px;
@@ -58,9 +64,45 @@ ul {
     width: 30px;
 }
 
+.coupon {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .left {
     border: 2px solid black;
+    padding-top: 150px;
+    padding-left: 10px;
     background-color: rgb(150, 150, 150);
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.productPic {
+    height: 250px;
+    width: 250px;
+    aspect-ratio: fixed;
+}
+
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.addToCart {
+    background-color: rgb(174, 174, 0);
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
 }
 
 .right {
@@ -68,11 +110,6 @@ ul {
     background-color: grey;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 8fr 2fr;
-    height: 100vh;
-}
 
 .searchImg {
     height: 18px;
