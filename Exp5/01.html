@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="01.css">
+</head>
+
+<body>
+    <h1>Student Management System</h1>
+    <div class="input-section">
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="number" id="studentScore" placeholder="Score">
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+    <div class="student-list">
+        <h2>Student List</h2>
+        <ul id="studentList"></ul>
+    </div>
+    <div class="summary">
+        <h2>Summary</h2>
+        <p id="averageScore"></p>
+    </div>
+    <script src="01.js"></script>
+</body>
+
+</html>
