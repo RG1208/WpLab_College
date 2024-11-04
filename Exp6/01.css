@@ -10,14 +10,67 @@
     height: 100vh;
 }
 
+.heading {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
 .left {
     background-color: antiquewhite;
+    padding-left: 20px;
 }
 
 .right {
     background-color: aquamarine;
+    padding-left: 20px;
 }
 
-.btns {
+
+.link,
+.height,
+.width,
+.documentBtn,
+.windowBtn,
+.documentBtn1 {
     margin-top: 20px;
+    padding: 15px;
+    box-shadow: 4px 5px rgb(100, 100, 100);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.documentBtn {
+    background-color: rgb(245, 179, 255);
+}
+
+.documentBtn1 {
+    background-color: rgb(179, 235, 255);
+}
+
+.windowBtn {
+    background-color: rgb(255, 237, 179);
+}
+
+.link {
+    background-color: rgb(179, 218, 255);
+}
+
+.height {
+    background-color: rgb(222, 179, 255);
+}
+
+.width {
+    background-color: rgb(255, 179, 207);
+}
+
+.textDiv {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: oblique;
 }
