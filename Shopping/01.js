@@ -1,20 +1,19 @@
-let cart = []
-const Tax = 0.18
-const couponCode = NEW10
+let cart = [];
+const TAX_RATE = 0.18; // Corrected TAX_RATE constant
+const couponCode = "NEW10";
 
 function addItem(name, price) {
     let item = cart.find(item => item.name === name);
     if (item) {
-        item.quantity += 1
-    }
-    else {
+        item.quantity += 1;
+    } else {
         cart.push({
-            name: "name",
-            price: "price",
+            name: name,
+            price: price,
             quantity: 1
-        })
+        });
     }
-    renderCart()
+    renderCart();
 }
 
 function calculateSubtotal() {
@@ -32,41 +31,50 @@ function applyDiscount(code) {
 
     if (code === couponCode) {
         discount = subtotal * 0.1; // 10% discount
-        alert("Discount applied: " + discount.toFixed(2));
+        alert("Discount applied: ₹" + discount.toFixed(2));
     } else {
         alert("Invalid discount code.");
     }
 
     return subtotal - discount;
 }
-function renderCart() {
-    const cartDetails = document.getElementById("cartDetails");
-    cartDetails.innerHTML = ""; // Clear previous content
 
-    // Display each item in the cart
+function renderCart() {
+    const cartItems = document.getElementById("cartItems");
+    const finalValueSection = document.getElementById("finalValueSection");
+
+    // Clear existing content
+    cartItems.innerHTML = "";
+    finalValueSection.innerHTML = "";
+
+    // Display items in the cart
     cart.forEach(item => {
         const itemElement = document.createElement("p");
-        itemElement.innerText = `${item.name} - $${item.price} x ${item.quantity}`;
-        cartDetails.appendChild(itemElement);
+        itemElement.classList.add("itemElement");
+        itemElement.innerText = `${item.name} - ₹${item.price} x ${item.quantity}`;
+        cartItems.appendChild(itemElement);
     });
 
-    // Display totals
+    // Display subtotal and total in the final value section
     const subtotal = calculateSubtotal();
     const totalWithTax = calculateTotal();
     const subtotalElement = document.createElement("p");
-    subtotalElement.innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+    subtotalElement.innerText = `Subtotal: ₹${subtotal.toFixed(2)}`;
     const totalElement = document.createElement("p");
-    totalElement.innerText = `Total (with tax): $${totalWithTax.toFixed(2)}`;
+    totalElement.innerText = `Total (with tax): ₹${totalWithTax.toFixed(2)}`;
 
-    cartDetails.appendChild(subtotalElement);
-    cartDetails.appendChild(totalElement);
+    finalValueSection.appendChild(subtotalElement);
+    finalValueSection.appendChild(totalElement);
 }
 
-// Adding an option to apply discount
 function applyDiscountCode() {
-    const code = prompt("Enter discount code:");
-    const totalAfterDiscount = applyDiscount(code);
+    const codeInput = document.getElementById("couponCodeInput").value;
+    const finalValueSection = document.getElementById("finalValueSection");
+
+    const totalAfterDiscount = applyDiscount(codeInput);
     const discountElement = document.createElement("p");
-    discountElement.innerText = `Total after discount: $${totalAfterDiscount.toFixed(2)}`;
-    document.getElementById("cartDetails").appendChild(discountElement);
+    discountElement.innerText = `Total after discount: ₹${totalAfterDiscount.toFixed(2)}`;
+
+    // Append the discounted total
+    finalValueSection.appendChild(discountElement);
 }

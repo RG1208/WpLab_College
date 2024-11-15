@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rachit Garg EXP 5</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="01.css">
 </head>
 
 <body>
-
     <ul>
         <div class="name">
 
@@ -37,9 +36,10 @@
         <p>FLAT 10% OFF FOR NEW USERS !!! (Use code= NEW10)</p>
     </div>
 
-    <div class="container">
-        <div class="left">
 
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
             <div class="product">
                 <img src="images/Iphone.png" alt="" class="productPic">
                 <p class="productName">Iphone 15Pro Max</p>
@@ -68,15 +68,74 @@
                 <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
             </div>
 
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+            <div class=" product">
+                <img src="images/Shoes.png" alt="" class="productPic">
+                <p class="productName">New Balance Shoes</p>
+                <p class="price">Price: 8999</p>
+                <button class="addToCart" onclick="addItem('New Balance Shoes', 8999)">Add To cart</button>
+            </div>
+
+
         </div>
         <div class="right">
-            <p>Your Cart Value</p>
-            <div id="cartDetails">
+            <p class="rightHeading">Your Cart Details</p>
 
+            <div id="cartItems"></div>
+
+            <div id="couponSection">
+                <input type="text" id="couponCodeInput" class="couponBox" placeholder="Enter Coupon Code Here">
+                <button class="applyCouponBtn" onclick="applyDiscountCode()">Apply Coupon</button>
+            </div>
+
+            <div id="finalValueSection">
+                <p>Total (with tax): ₹00.00</p>
             </div>
         </div>
-    </div>
-    <script src="01.js"></script>
+        <script src="01.js"></script>
 </body>
 
 </html>
