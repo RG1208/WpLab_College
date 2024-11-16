@@ -114,6 +114,7 @@ ul {
     background-color: #ebeb21;
     color: black;
     border-radius: 30px;
+    margin-top: 10px;
     padding: 10px;
     border: none;
     font-weight: bold;
@@ -124,6 +125,7 @@ ul {
     background-color: rgb(200, 200, 50);
 }
 
+
 .right {
     border: 2px solid black;
     padding: 10px;
@@ -132,13 +134,14 @@ ul {
     justify-content: space-between;
 }
 
-
 #cartItems {
-    background-color: white;
     padding: 10px;
     border-radius: 5px;
-    height: 200px;
+    height: auto;
     overflow-y: auto;
+    margin-bottom: 10px;
+    flex-grow: 1;
+
 }
 
 #couponSection {
@@ -146,6 +149,8 @@ ul {
     padding: 10px;
     border-radius: 5px;
     display: flex;
+    position: sticky;
+    bottom: 0;
 }
 
 .couponBox {
@@ -170,21 +175,24 @@ ul {
     background-color: #218838;
 }
 
+.rightBottom {
+    position: sticky;
+    bottom: 0;
+}
+
 #finalValueSection {
     background-color: black;
     padding: 10px;
     color: white;
     border-radius: 5px;
-    position: sticky;
-    bottom: 0;
-
 }
 
 
 .rightHeading {
     font-size: 25px;
     font-weight: bolder;
-    margin: 10px 0;
+    margin: 10px 0 30px 50px;
+
 }
 
 .itemElement {

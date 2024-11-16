@@ -33,6 +33,7 @@ function renderCart() {
     cartItems.innerHTML = "";
     finalValueSection.innerHTML = "";
 
+
     cart.forEach(item => {
         const itemElement = document.createElement("p");
         itemElement.classList.add("itemElement");
