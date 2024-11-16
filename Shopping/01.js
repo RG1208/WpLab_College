@@ -1,5 +1,5 @@
 let cart = [];
-const TAX_RATE = 0.18; // Corrected TAX_RATE constant
+const TAX_RATE = 0.18;
 const couponCode = "NEW10";
 
 function addItem(name, price) {
@@ -25,29 +25,14 @@ function calculateTotal() {
     return subtotal + subtotal * TAX_RATE;
 }
 
-function applyDiscount(code) {
-    const subtotal = calculateSubtotal();
-    let discount = 0;
-
-    if (code === couponCode) {
-        discount = subtotal * 0.1; // 10% discount
-        alert("Discount applied: ₹" + discount.toFixed(2));
-    } else {
-        alert("Invalid discount code.");
-    }
-
-    return subtotal - discount;
-}
 
 function renderCart() {
     const cartItems = document.getElementById("cartItems");
     const finalValueSection = document.getElementById("finalValueSection");
 
-    // Clear existing content
     cartItems.innerHTML = "";
     finalValueSection.innerHTML = "";
 
-    // Display items in the cart
     cart.forEach(item => {
         const itemElement = document.createElement("p");
         itemElement.classList.add("itemElement");
@@ -55,7 +40,6 @@ function renderCart() {
         cartItems.appendChild(itemElement);
     });
 
-    // Display subtotal and total in the final value section
     const subtotal = calculateSubtotal();
     const totalWithTax = calculateTotal();
     const subtotalElement = document.createElement("p");
@@ -65,6 +49,20 @@ function renderCart() {
 
     finalValueSection.appendChild(subtotalElement);
     finalValueSection.appendChild(totalElement);
+}
+
+function applyDiscount(code) {
+    const subtotal = calculateSubtotal();
+    let discount = 0;
+
+    if (code === couponCode) {
+        discount = subtotal * 0.1;
+        alert("Discount applied: ₹" + discount.toFixed(2));
+    } else {
+        alert("Invalid discount code.");
+    }
+
+    return subtotal - discount;
 }
 
 function applyDiscountCode() {

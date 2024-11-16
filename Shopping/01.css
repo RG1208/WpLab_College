@@ -13,17 +13,7 @@ ul {
     background-color: rgb(0, 0, 104);
 }
 
-.searchImg {
-    height: 18px;
-    width: 18px;
-    padding: 2px;
-}
 
-.searchBtn {
-    margin-left: -25px;
-    background-color: #fff;
-    border: none;
-}
 
 .name {
     display: flex;
@@ -44,16 +34,26 @@ ul {
     align-items: center;
     list-style: none;
     align-items: center;
-    margin-left: 350px;
-}
-
-.input {
-    margin-left: 500px;
+    margin-left: 250px;
 }
 
 .typeHere {
+    margin-left: 250px;
+    height: 30px;
     padding: 5px;
-    width: 270px;
+    width: 600px;
+}
+
+.searchImg {
+    height: 23px;
+    width: 23px;
+    padding: 2px;
+}
+
+.searchBtn {
+    margin-left: -40px;
+    background-color: #fff;
+    border: none;
 }
 
 .profile {
@@ -68,12 +68,6 @@ ul {
     width: 30px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 8fr 2fr;
-    height: 100vh;
-}
-
 .coupon {
     height: 50px;
     display: flex;
@@ -83,15 +77,26 @@ ul {
     font-size: 20px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    height: 100vh;
+}
+
 .left {
     border: 2px solid black;
-    padding-top: 15px;
-    padding-left: 20px;
+    padding: 15px 20px 20px;
     display: flex;
     flex-direction: row;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+}
+
+.product {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .productPic {
@@ -106,8 +111,8 @@ ul {
 }
 
 .addToCart {
-    background-color: rgb(174, 174, 0);
-    color: white;
+    background-color: #ebeb21;
+    color: black;
     border-radius: 30px;
     padding: 10px;
     border: none;
@@ -120,7 +125,6 @@ ul {
 }
 
 .right {
-    flex: 2;
     border: 2px solid black;
     padding: 10px;
     display: flex;
@@ -141,28 +145,21 @@ ul {
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-}
-
-#finalValueSection {
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    position: sticky;
-    bottom: 0;
-
+    display: flex;
 }
 
 .couponBox {
-    width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 20px;
 }
 
 .applyCouponBtn {
-    margin-top: 5px;
+
     padding: 5px 10px;
     background-color: #28a745;
+    font-size: 10px;
     color: white;
     border: none;
     border-radius: 5px;
@@ -172,6 +169,17 @@ ul {
 .applyCouponBtn:hover {
     background-color: #218838;
 }
+
+#finalValueSection {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    position: sticky;
+    bottom: 0;
+
+}
+
 
 .rightHeading {
     font-size: 25px;
